@@ -19,4 +19,9 @@
         $base.css('background-color', farge);
         $base.siblings().css('background-color', farge);
     });
+    $('tr td > span a img[alt="View newest post"]').each(function(idx, elt) {
+        var $link = $(this).parent();
+        var $titlelink = $link.parent().children(1);
+        $titlelink.attr("href", $link.attr("href"));
+    });
 })();
